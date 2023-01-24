@@ -15,7 +15,7 @@ The task entered on screen will save to local disk. Time bands will change in co
 
 
 
-<img src="./assets/images/screenshot.png">
+<img src="assets/images/screenshot.png">
 
 
 ## Deployed Link
