@@ -1,43 +1,194 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Assets/CSS/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
 
-  
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+
+
+
+    <!-- Timeblocks go here -->
+
+
+
+
+
+
+    <div class="timeRow">
+
+
+      <div class="rowBlocks " id="timeofDayColumn">
+        <h2 id=timeOfDay>9:00</h2>
+      </div>
+      <div class="rowBlocks taskText-9" id="taskText">
+        <textarea maxlength="100" id="textarea-9">Hello world!</textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <button onclick="saveText(9)" class="saveBtn Btn9" id="Btn-09"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+
     </div>
 
 
 
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>10:00</h2>
+      </div>
+      <div class="rowBlocks taskText-10" id="taskText">
+        <textarea maxlength="100" id="extarea-10"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn10"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>11:00</h2>
+      </div>
+      <div class="rowBlocks taskText-11" id="taskText">
+        <textarea maxlength="100" id="extarea-11"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn11"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>12:00</h2>
+      </div>
+      <div class="rowBlocks taskText-12" id="taskText">
+        <textarea maxlength="100" id="extarea-12"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn12"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>13:00</h2>
+      </div>
+      <div class="rowBlocks taskText-13" id="taskText">
+        <textarea maxlength="100" id="extarea-13"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn13"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>14:00</h2>
+      </div>
+      <div class="rowBlocks taskText-14" id="taskText">
+        <textarea maxlength="100" id="extarea-14"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn14"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>15:00</h2>
+      </div>
+      <div class="rowBlocks taskText-15" id="taskText">
+        <textarea maxlength="100" id="extarea-15"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn15"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>16:00</h2>
+      </div>
+      <div class="rowBlocks taskText-16" id="taskText">
+        <textarea maxlength="100" id="extarea-16"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn16"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+    <div class="timeRow">
+      <div class="rowBlocks" id="timeofDayColumn">
+        <h2 id=timeOfDay>17:00</h2>
+      </div>
+      <div class="rowBlocks taskText-17" id="taskText">
+        <textarea maxlength="100" id="extarea-17"></textarea>
+      </div>
+      <div class="rowBlocks" id="saveOption">
+        <!-- <i class="fas fa-lock-open"></i> -->
+        <button class="saveBtn Btn17"><i class="fas fa-save fa-3x"></i></button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/Assets/JS/index.js"></script>
+</body>
+
 </html>
