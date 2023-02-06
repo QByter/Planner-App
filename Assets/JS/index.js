@@ -4,72 +4,48 @@ $("#currentDay").text(currentTime.format("dddd, MMMM, Do"));
 let timeOfDayHour = "";
 timeOfDayHour = moment().format("H");
 
-let allCurrentTasks=JSON.parse(localStorage.getItem("storedTasks"))
+console.log(timeOfDayHour)
 
+let allCurrentTasks = JSON.parse(localStorage.getItem("storedTasks")) || [];
 
-if (localStorage.length === 0) {
-  allCurrentTasks = [];
-} else{
+function displayTask() {
+  for (i = 0; i < allCurrentTasks.length; i++) {
+    let displayAreaID = allCurrentTasks[i][0];
 
+    console.log("Display Area ID: " + displayAreaID);
+
+    storedTask = allCurrentTasks[i][1];
+
+    console.log("Stored task: " + storedTask);
+
+    if (allCurrentTasks[i][1] != null)
+      document.getElementById(displayAreaID).placeholder = storedTask;
+  }
 }
 
-// let timerInterval = setInterval(function () {
-//   console.log(timeOfDayHour);
-
-//   timeColorTextArea();
-
-// }, 1000);
-
-// function timeColorTextArea(){
+displayTask();
 
 for (i = 9; i < 19; i++) {
   if (i < timeOfDayHour) {
     let tagEl1 = ".taskText-" + i;
+    document.querySelector(tagEl1).style.backgroundColor = "#D3D3D3";
+  } else if (i == timeOfDayHour) {
+    let tagEl1 = ".taskText-" + i;
     let targetTextArea = document.querySelector(tagEl1);
-    // document.querySelector(tagEl1).backgroundColor = "#D3D3D3";
-    // document.querySelector(tagEl1).setAttribute.backgroundColor = "#D3D3D3";
-    // targetTextArea.setAttribute.backgroundColor = "#D3D3D3";
-
-  } 
-
-else if (i == timeOfDayHour) {
-let tagEl1 = ".taskText-" + i;
- let targetTextArea = document.querySelector(tagEl1);
-  // document.querySelector(tagEl1)style.backgroundColor = "#FFa590";
-  // document.querySelector(tagEl1).settAttribute.backgroundColor = "#FFa590";
-  // targetTextArea.settAttribute.backgroundColor = "#FFa590";
-
+    document.querySelector(tagEl1).style.backgroundColor = "#ff6961";
+    console.log(tagEl1);
+  }
 }
-
-  // console.log(tagEl1);
-}
-// #FFCCCB
-
-
-
-
-// document.addEventListener("click",function(event){
-// // console.log(event.target.parentElement.id);
-// let parent = event.target.parentElement.id;
-// let parentSelector = "#"+parent;
-// let sibling = document.querySelector(parentSelector).firstChild;
-// console.log(parent);
-// console.log(sibling);
-
-// });
-
-
 
 function saveText(textID) {
-let textareaID = "textarea-"+textID;
-console.log(textareaID)
-let textareIDtext = document.getElementById(textareaID).value;
-allCurrentTasks.push([textareaID,textareIDtext]);
-localStorage.setItem("storedTasks", JSON.stringify(allCurrentTasks));
-console.log(textareIDtext)
+  let textareaID = "textarea-" + textID;
+  console.log("textArea ID: " + textareaID);
+  let textareIDtext = document.getElementById(textareaID).value;
+  console.log("The input text: " + textareaID + " " + textareIDtext);
 
+  allCurrentTasks.unshift([textareaID, textareIDtext]);
 
+  localStorage.setItem("storedTasks", JSON.stringify(allCurrentTasks));
+
+  console.log(textareIDtext);
 }
-
-
-

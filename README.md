@@ -14,10 +14,8 @@ The task entered on screen will save to local disk. Time bands will change in co
 <br>
 
 
-
-<img src="./Assets/images/screenshot.png">
-
+![Word Day Planner App](./assets/images/screenshot.png)
 
 ## Deployed Link
 
-https://qbyter.github.io/Planner-App/
+- https://qbyter.github.io/Planner-App/
